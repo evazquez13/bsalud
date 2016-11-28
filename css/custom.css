@@ -618,7 +618,7 @@ ul.dropdown-menu{
 }
 .panel-default > .panel-heading{
 	background-color: #fff;
-	background: #fff;
+    text-align: left;
 }
 .panel-body{
 	border:none;
@@ -742,5 +742,9 @@ span{
 }
 .h1Index{
 	margin-top: 30px;
+}
+.preguntas .panel-default > .panel-heading{
+	background-color: #f7f7f7;
+    text-align: left;
 }
 /*Termina estilos index 2*/
