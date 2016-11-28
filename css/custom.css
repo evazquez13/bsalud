@@ -726,10 +726,12 @@ span{
 .productosIndex{
 	margin-top: 30px;
 }
-.preventivaIndex{
+.preventivaIndex span{
 	border-radius: 5px;
 	border: 1px solid #094FA4;
 	margin-top: 40px;
+	width: auto;
+	padding: 10px;
 }
 .indexPmedico{
 	margin-top: 80px;
