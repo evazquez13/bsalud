@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'bbva-regular';
-  src: url("../fonts/bbvaweb-book.eot");
-  src: url("../fonts/bbvaweb-book.eot?#iefix") format("embedded-opentype"), url("../fonts/bbvaweb-book.woff") format("woff"), url("../fonts/bbvaweb-book.ttf") format("truetype"), url("../fonts/bbvaweb-book.svg#StagSansBook") format("svg");
+  src: url("fonts/bbvaweb-book.eot");
+  src: url("fonts/bbvaweb-book.eot?#iefix") format("embedded-opentype"), url("fonts/bbvaweb-book.woff") format("woff"), url("fonts/bbvaweb-book.ttf") format("truetype"), url("fonts/bbvaweb-book.svg#StagSansBook") format("svg");
   font-style: normal;
   font-weight: 500;
   font-stretch: normal;
 }
 @font-face {
   font-family: 'bbva-bold';
-  src: url("../fonts/bbvaweb-semibold.eot");
-  src: url("../fonts/bbvaweb-semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/bbvaweb-semibold.woff") format("woff"), url("../fonts/bbvaweb-semibold.ttf") format("truetype"), url("../fonts/bbvaweb-semibold.svg#StagSansBook") format("svg");
+  src: url("fonts/bbvaweb-semibold.eot");
+  src: url("fonts/bbvaweb-semibold.eot?#iefix") format("embedded-opentype"), url("fonts/bbvaweb-semibold.woff") format("woff"), url("fonts/bbvaweb-semibold.ttf") format("truetype"), url("fonts/bbvaweb-semibold.svg#StagSansBook") format("svg");
   font-style: normal;
   font-weight: 500;
   font-stretch: normal;
