@@ -750,6 +750,10 @@ button{
 	background-color: #f7f7f7;
     text-align: left;
 }
+.bordeIndex{
+	border-left: 1px solid #ccc;
+	padding: 1px 0px 1px 15px;
+}
 /*Termina estilos index 2*/
 button{
 	border:none;
