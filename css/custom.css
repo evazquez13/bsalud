@@ -374,7 +374,7 @@ ul.listcobertura li{
   	margin-bottom: 10px;
 }
 .infoAyuda{
-	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
 	height: 200px;
     margin-top: 2px;
 }
