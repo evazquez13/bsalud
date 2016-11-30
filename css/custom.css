@@ -686,6 +686,8 @@ span{
 /*Estilo para tabla suguroGMM*/
 .planesGMM{
 	margin-top: 150px;
+	margin-left: 5px;
+    margin-right: 5px;
 }
 .tablaGMM{
 	border-radius: 4px;
