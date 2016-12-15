@@ -1,10 +1,63 @@
   <!DOCTYPE html>
 <html class="no-js">
 <head charset="UTF-8">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="shortcut icon" href="https://www.segurodeautobancomer.com/wp-content/uploads/2016/10/favicon.png">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="css/menu.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+
+function calculaRFC() {
+  function quitaArticulos(palabra) {
+    return palabra.replace("DEL ", "").replace("LAS ", "").replace("DE ",
+        "").replace("LA ", "").replace("Y ", "").replace("A ", "");
+  }
+  function esVocal(letra) {
+    if (letra == 'A' || letra == 'E' || letra == 'I' || letra == 'O'
+        || letra == 'U' || letra == 'a' || letra == 'e' || letra == 'i'
+        || letra == 'o' || letra == 'u')
+      return true;
+    else
+      return false;
+  }
+  nombre = $("#NOMBRE_PERSONA").val().toUpperCase();
+  apellidoPaterno = $("#APELLIDO_PATERNO").val().toUpperCase();
+  apellidoMaterno = $("#APELLIDO_MATERNO").val().toUpperCase();
+  fecha = $("#F_NACIMIENTO").val();
+  var rfc = "";
+  apellidoPaterno = quitaArticulos(apellidoPaterno);
+  apellidoMaterno = quitaArticulos(apellidoMaterno);
+  rfc += apellidoPaterno.substr(0, 1);
+  var l = apellidoPaterno.length;
+  var c;
+  for (i = 0; i < l; i++) {
+    c = apellidoPaterno.charAt(i);
+    if (esVocal(c)) {
+      rfc += c;
+      break;
+    }
+  }
+  rfc += apellidoMaterno.substr(0, 1);
+  rfc += nombre.substr(0, 1);
+  rfc += fecha.substr(8, 10);
+  rfc += fecha.substr(0, 2);
+  rfc += fecha.substr(3, 5).substr(0, 2);
+  // rfc += "-" + homclave;
+  $("#RFC").val(rfc);
+}
+</script>
+<script>
+  $( function() {
+    $( "#F_NACIMIENTO" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      yearRange: '1950:2013'
+    });
+  } );
+  </script>
 
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9M4QL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -194,7 +247,7 @@
               <label class="control-label">Nombre*</label>
             </div>
             <div class="col-md-8">
-              <input type="text" class="form-control" name="nombre">
+              <input type="text" class="uppercase form-control" id="NOMBRE_PERSONA" onchange="calculaRFC();">
             </div>
           </div>
           <div class="form-group">
@@ -202,7 +255,7 @@
               <label class="control-label">Apellido Paterno*</label>
             </div>
             <div class="col-md-8">
-              <input type="text" class="form-control" name="apellidoPat">
+              <input type="text" class="form-control" name="APELLIDO_PATERNO" id="APELLIDO_PATERNO" onchange="calculaRFC();">
             </div>
           </div>
           <div class="form-group">
@@ -210,7 +263,7 @@
               <label class="control-label">Apellido Materno</label>
             </div>
             <div class="col-md-8">
-              <input type="text" class="form-control" name="apellidoMAt">
+              <input type="text" class="form-control" name="APELLIDO_MATERNO" id="APELLIDO_MATERNO" onchange="calculaRFC();">
             </div>
           </div>
           <div class="form-group">
@@ -218,9 +271,9 @@
               <label class="form-label">Genero</label>
             </div>
             <div class="col-md-8">
-              <select id="genero" name="genero" class="form-control">
-              <option value="Masculino" selected="selected">Masculino</option>
-              <option value="Femenino">Femenino</option>
+              <select id="genero" name="SEXO" class="form-control">
+              <option value="M" selected="selected">Masculino</option>
+              <option value="F">Femenino</option>
               </select>
             </div>
           </div>
@@ -228,25 +281,16 @@
             <div class="col-md-4">
               <label class="form-label">Fecha de Nacimiento (dd/mm/aaaa)</label>
             </div>
-            <div class="col-md-2 col-md-offset-1">
-              <input type="text" class="form-control" name="dia">
-            </div>
-            <div class="col-md-2">
-              <input type="text" class="form-control" name="mes">
-            </div>
-            <div class="col-md-2">
-              <input type="text" class="form-control" name="anio">
+            <div class="col-md-8">
+              <input id ="F_NACIMIENTO" maxlength="10" name="F_NACIMIENTO" class="campofechaNac form-control" type="text" onchange="calculaRFC();"/>
             </div>
           </div>
           <div class="form-group">
             <div class="col-md-4">
               <label class="form-label">RFC*</label>
             </div>
-            <div class="col-md-4">
-              <input type="text" class="form-control" value="RFC">
-            </div>
-            <div class="col-md-2">
-              <button type="submit" value="calcular" name="calcular" class="btn btn-primary">Calcular</button>
+            <div class="col-md-6">
+              <input class="uppercase form-control" id="RFC"  name="RFC" type="text" disabled/>
             </div>
             <div class="col-md-2">
               <input type="text" class="form-control" value="homoclave">
@@ -389,6 +433,5 @@
 
 </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="js/script.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
