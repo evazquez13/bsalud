@@ -795,6 +795,9 @@ button{
 	padding: 1px 0px 1px 15px;
 }
 /*Termina estilos index 2*/
+.h1izq {
+    text-align: left;
+}
 button{
 	border:none;
 }
@@ -814,4 +817,20 @@ button{
 .h3FAQs {
     font-size: 18px;
     font-family: 'bbva-regular';
+}
+.etiMedPrev{
+	background-color: #094fa4;
+	color: #FFF;
+    width: 45%;
+    padding: 5px 0px 5px 0px;
+    border: 2px solid #ccc;
+    border-radius: 12px 12px 12px 12px;
+    font-size: 15px;
+}
+.etiMedPrev:hover{
+	background-color: #FFF;
+	color: #000;
+}
+.bordeMedPre{
+	border-left: 1px solid #ccc;
 }
