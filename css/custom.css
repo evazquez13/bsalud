@@ -480,6 +480,11 @@ h3.title-utilizar span{
 		width: 31.33% !important;
 	}
 }
+@media (min-width : 1200px) {
+	li.with-sub-menu:hover .row.siniestro{
+		width: 23% !important;
+	}
+}
 @media (max-width : 1200px) {
 li.with-sub-menu:hover .row.items-1{
 		width: 31% !important;

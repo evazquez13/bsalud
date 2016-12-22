@@ -274,7 +274,7 @@ th {
   font-style: normal;
   font-weight: normal;
   line-height: 1;
-
+  font-size: 30px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1445,7 +1445,9 @@ dd {
   line-height: 1.42857143;
 }
 dt {
-  font-weight: bold;
+  font-family: "bbva-regular";
+  color: #094fa4;
+  font-size: 16px;
 }
 dd {
   margin-left: 0;
