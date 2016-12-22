@@ -854,3 +854,11 @@ button{
     border-radius: 4px;
 
 }
+.pSiniestro{
+	height: 130px;
+	border-left: 1px solid #ccc;
+    padding: 0px 10px 0px 10px;
+}
+.sinSalud{
+	margin-top: 50px;
+}
