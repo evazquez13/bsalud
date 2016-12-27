@@ -862,3 +862,8 @@ button{
 .sinSalud{
 	margin-top: 50px;
 }
+.gallery
+{
+    display: inline-block;
+    margin-top: 20px;
+}

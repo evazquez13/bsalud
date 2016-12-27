@@ -27,4 +27,11 @@ $('span').on('mouseenter' , function(){
 $('span').on('mouseleave' , function(){
 	$(this).popover('hide')
 })
+$(".fancybox").fancybox({
+    helpers : {
+        title: {
+            type: 'outside'
+        }
+    }
+});
 });
