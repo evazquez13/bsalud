@@ -232,8 +232,8 @@ li.icon-contacto{
 	font-family: 'bbva-regular';
 	position: relative;	
 }
-.bnt-slider{
-	background: url('https://www.segurodeautobancomer.com/wp-content/uploads/2016/10/bg_btn_green.png');
+.boton-verde{
+	background: url('http://ec2-52-213-166-151.eu-west-1.compute.amazonaws.com/wp-content/uploads/2016/12/bg_btn_green.png');
 	padding: 5px;
 	padding-left: 30px;
 	padding-right: 30px;
@@ -242,7 +242,21 @@ li.icon-contacto{
 	color: #ffffff;	
 	border: none;
 	font-family: 'bbva-regular';
--webkit-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;		
+}
+.boton-azul{
+	background: url('http://ec2-52-213-166-151.eu-west-1.compute.amazonaws.com/wp-content/uploads/2016/12/pattern_bg.png');
+	padding: 5px;
+	padding-left: 30px;
+	padding-right: 30px;
+	text-shadow: none;
+	font-size: 17px;
+	color: #ffffff;	
+	border: none;
+	font-family: 'bbva-regular';
+	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;		
 }
@@ -375,7 +389,6 @@ ul.listcobertura li{
 }
 .infoAyuda{
 	border-left: 1px solid #ccc;
-	height: 200px;
     margin-top: 2px;
 }
 .avisos{
@@ -496,11 +509,7 @@ li.with-sub-menu:hover .row.items-1{
 		width: 30.3% !important;
 	}
 }
-@media (max-width : 768px) {
-li.with-sub-menu:hover .row.items-1{
-		width: 31.33% !important;
-	}
-}
+
 .navbar-header{
 	background-color: #FFF;
 }
@@ -551,7 +560,14 @@ li.with-sub-menu:hover .row.items-1{
 .navbar.navbar-default{
 	margin-bottom: 0px !important;
 }
-
+@media only screen and (max-width : 768px) {
+li.with-sub-menu:hover .row.items-1{
+		width: 31.33% !important;
+	}
+	.navbar-nav>li>a{
+		background:none;	
+	}	
+}
 
 /*Comienza estilo de menu hamburguesa*/
 
@@ -612,7 +628,6 @@ ul.dropdown-menu{
     float: right;        /* adjust as needed */
     color: grey;         /* adjust as needed */
 	content: "\e260";    /* adjust as needed, taken from bootstrap.css */
-    top: -15px;
     position: relative;	
 }
 .panel-default{
@@ -679,7 +694,7 @@ span{
 }
 /*Estilos para hoje seguro gmm*/
 .gmmCabecera{
-	margin-top: 10px;
+	margin-top: 30px;
 	margin-bottom: 30px;
 }
 .gmmCabecera ul li{
@@ -689,10 +704,12 @@ span{
 /*termina estilos para hoje seguro gmm*/
 
 /*Estilo para tabla suguroGMM*/
+h1.sumasAseguradas{
+	margin: 15px;
+}
 .planesGMM{
-	margin-top: 150px;
-	margin-left: 5px;
-    margin-right: 5px;
+	margin-left: 10px;
+    margin-right: 10px;
 }
 .tablaGMM{
 	border-radius: 4px;
@@ -755,7 +772,7 @@ span{
 /*Estilos del nuevoindex*/
 .botonIndex{
 	margin-top: 15px;
-	background-image: url('../img/bg_btn_green.png');
+	background-image: url('http://ec2-52-213-166-151.eu-west-1.compute.amazonaws.com/wp-content/uploads/2016/12/bg_btn_green.png');
 	color: #FFF;
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
@@ -791,21 +808,67 @@ button{
 .h1Index{
 	margin-top: 30px;
 }
-.preguntas .panel-default > .panel-heading{
-	background-color: #f7f7f7;
+.panel-default > .panel-heading {
+    background-color: #f7f7f7;
     text-align: left;
 }
 .bordeIndex{
 	border-left: 1px solid #ccc;
 	padding: 1px 0px 1px 15px;
 }
-/*Termina estilos index 2*/
-.h1izq {
-    text-align: left;
+.sinBordeIndex{
+	padding: 1px 0px 1px 15px;
 }
+ul li{
+	list-style-image: url('http://ec2-52-213-166-151.eu-west-1.compute.amazonaws.com/wp-content/uploads/2016/12/icono_ok.png');
+	text-align: left;
+}
+/*Termina estilos index 2*/
 button{
 	border:none;
 }
+/* mision vision*/
+span.tituloMision{
+	padding-left: 10px;
+	font-size: 18px;
+	font-family: arial,sans-serif;
+	color: #094fa4;
+	position: relative;
+	top: -8px;
+}
+.backmision{
+	background: url('http://ec2-52-213-166-151.eu-west-1.compute.amazonaws.com/wp-content/uploads/2016/12/img_mv.png') no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+.separadortop{
+	margin-bottom: 25px;
+}
+.mision{
+	margin-bottom: 35px;
+	margin-top: 20px;
+}
+.h1izq{
+	text-align: left;
+}
+/*Estilos para glosario*/
+.etiquetaGlosa{
+	background-color: #094fa4;
+    color: #FFF;
+    width: 6%;
+    padding: 5px 0px 5px 0px;
+    border-radius: 0px 12px 12px 0px;
+}
+.lineaGlosa{
+	border-top: 2px solid #ccc;
+}
+.backcontacto{
+	background: url('http://ec2-52-213-166-151.eu-west-1.compute.amazonaws.com/wp-content/uploads/2016/12/img_contacto.jpg') no-repeat;
+	padding: 100px 0px 34px 0px;
+    background-size: cover;
+}
+/*Termina estilos para glosario*/
+/*Estilo para categorias preguntas frecuentes index*/
 .fondoFAQs {
     color: #094fa4;
     border: 1px solid #094fa4;
@@ -823,37 +886,8 @@ button{
     font-size: 18px;
     font-family: 'bbva-regular';
 }
-.etiMedPrev{
-	background-color: #094fa4;
-	color: #FFF;
-    width: 45%;
-    padding: 5px 0px 5px 0px;
-    border: 2px solid #ccc;
-    border-radius: 12px 12px 12px 12px;
-    font-size: 15px;
-}
-.etiMedPrev:hover{
-	background-color: #FFF;
-	color: #000;
-}
-.bordeMedPre{
-	border-left: 1px solid #ccc;
-}
-.boton-azul{
-	background: url(http://ec2-52-213-166-151.eu-west-1.compute.amazonaws.com/wp-content/uploads/2016/12/pattern_bg.png);
-    padding: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
-    text-shadow: none;
-    font-size: 17px;
-    color: #ffffff;
-    border: none;
-    font-family: 'bbva-regular';
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-
-}
+/*Termina estilo para categorias preguntas frecuentes index*/
+/*Etilos para pagina de siniestro*/
 .pSiniestro{
 	height: 130px;
 	border-left: 1px solid #ccc;
@@ -862,8 +896,10 @@ button{
 .sinSalud{
 	margin-top: 50px;
 }
-.gallery
-{
+/*Termina estilo para pagina de siniestro*/
+/*Estilo para pagina siniestrosPersona*/
+.gallery{
     display: inline-block;
     margin-top: 20px;
 }
+/*Termina estilo para pagina siniestrosPersona*/
