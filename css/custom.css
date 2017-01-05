@@ -925,3 +925,12 @@ span.tituloMision{
     margin-top: 50px;
 }
 /*Termina estilos de pagina oficinas de atencion (GMM y salud)*/
+/*Estilos de pagina comprobantes fiscales*/
+.backComFis{
+	background-color: #f1f4f7;
+	margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+/*Termina estilos de pagina comprobantes fiscales*/
