@@ -1,3 +1,4 @@
+/*Termina estilos de pagina oficinas de atencion (GMM y salud)*/
 @font-face {
   font-family: 'bbva-regular';
   src: url("fonts/bbvaweb-book.eot");
@@ -258,7 +259,8 @@ li.icon-contacto{
 	font-family: 'bbva-regular';
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
-	border-radius: 4px;		
+	border-radius: 4px;
+	margin-bottom: 20px;		
 }
 .bnt-slider:hover{
 	background: url('https://www.segurodeautobancomer.com/wp-content/uploads/2016/10/bg_btn_green.png');
@@ -843,6 +845,12 @@ span.tituloMision{
 }
 .separadortop{
 	margin-bottom: 25px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eaeaea+0,7f7f7f+76,a5a4a4+100 */
+	background: #eaeaea; /* Old browsers */
+	background: -moz-linear-gradient(left,  #eaeaea 0%, #7f7f7f 76%, #a5a4a4 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  #eaeaea 0%,#7f7f7f 76%,#a5a4a4 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  #eaeaea 0%,#7f7f7f 76%,#a5a4a4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#a5a4a4',GradientType=1 ); /* IE6-9 */
 }
 .mision{
 	margin-bottom: 35px;
@@ -890,11 +898,15 @@ span.tituloMision{
 /*Etilos para pagina de siniestro*/
 .pSiniestro{
 	height: 130px;
-	border-left: 1px solid #ccc;
-    padding: 0px 10px 0px 10px;
 }
 .sinSalud{
 	margin-top: 50px;
+}
+.sinSalud .bordeSin{
+	border-left: 1px solid #CCC;
+}
+.sinSalud span.spanSubraya{
+	border-bottom: 1px solid;
 }
 /*Termina estilo para pagina de siniestro*/
 /*Estilo para pagina siniestrosPersona*/
@@ -908,6 +920,9 @@ span.tituloMision{
 	background: url('http://ec2-52-213-166-151.eu-west-1.compute.amazonaws.com/wp-content/uploads/2017/01/img_preventiva.png') no-repeat;
 	padding: 100px 0px 69px 0px;
     background-size: cover;
+}
+.mp{
+	margin-top: 60px;
 }
 /*Termina estilos de pagina medicina preventiva*/
 /*Estilos de pagina oficinas de atencion (GMM y salud)*/
@@ -932,5 +947,8 @@ span.tituloMision{
     margin-bottom: 30px;
     padding-top: 30px;
     padding-bottom: 30px;
+}
+.margenCF{
+	margin-bottom: 20px;
 }
 /*Termina estilos de pagina comprobantes fiscales*/
