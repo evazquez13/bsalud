@@ -1,5 +1,10 @@
 $(document).on( 'ready' , function() {
 // alert('ok')
+pantalla();
+$(window).resize(
+  	function(){
+  		pantalla();
+  	})
     $('#myCarousel').carousel({
 		interval:   4000
 	});
@@ -48,3 +53,12 @@ $('.glyphicon').on('click' , function(){
 	}
 })
 });
+function pantalla(){
+  pant = $(window).width();
+  console.info( 'la pantalla mide ' + pant + 'px' );
+  if (pant <= 440) {
+  	$('.productosIndex .sinBordeIndex,.productosIndex .bordeIndex').css('height','auto');
+  }else{
+  	$('.productosIndex .sinBordeIndex,.productosIndex .bordeIndex').css({'height':'170px','font-size':'35px'});
+  }
+  }	
