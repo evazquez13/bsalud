@@ -1,3 +1,6 @@
+.container{
+	width: 960px;
+}
 @font-face {
   font-family: 'bbva-regular';
   src: url("fonts/bbvaweb-book.eot");
@@ -235,6 +238,7 @@ a{
 }
 .boton-verde{
 	background: url('http://d3ghvh1f861wyu.cloudfront.net/wp-content/uploads/2016/12/bg_btn_green.png');
+	background-size: cover;
 	padding: 5px;
 	padding-left: 30px;
 	padding-right: 30px;
@@ -242,10 +246,13 @@ a{
 	font-size: 17px;
 	color: #ffffff;	
 	border: none;
-	font-family: 'bbva-regular';
+	font-family: 'bbva-regular' ;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;		
+}
+.boton-verde:focus{
+    outline:none;
 }
 .boton-azul{
 	background: url('http://d3ghvh1f861wyu.cloudfront.net/wp-content/uploads/2016/12/pattern_bg.png');
@@ -291,6 +298,7 @@ a{
 	color: #363636 !important;
 	font-size: 15px !important;
 	font-family: 'bbva-regular';
+	height: 115px;
 }
 .btn-transparente{
 	border: 1px solid #094FA4;
@@ -621,13 +629,13 @@ ul.dropdown-menu{
     /* symbol for "opening" panels */
     font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
     content: "\e259";    /* adjust as needed, taken from bootstrap.css */
-    float: right;        /* adjust as needed */
+    float: left;        /* adjust as needed */
     color: grey;         /* adjust as needed */
 
 }
 .panel-heading .accordion-toggle:after{
     font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
-    float: right;        /* adjust as needed */
+    float: left;        /* adjust as needed */
     color: grey;         /* adjust as needed */
 	content: "\e260";    /* adjust as needed, taken from bootstrap.css */
     position: relative;	
@@ -718,7 +726,7 @@ h1.sumasAseguradas{
 .tablaGMM{
 	border-radius: 4px;
     border-style: hidden;
-    box-shadow: 0 0 0 4px #0f6bda;
+    box-shadow: 0 0 0 2px #0f6bda;
     margin: 5px !important;
 }
 .tablaGMM thead{
@@ -1097,8 +1105,8 @@ td:nth-child(even) {
 	color: #363636;
 	font-size: 14px;
 }
-.requeriments span.resaltar-correo{
-	font-size: 16px;
+span.resaltar-correo{
+	font-size: 14px !important;
 	color:#0f6bda !important;
 }
 .snstr{
@@ -1124,10 +1132,6 @@ table.tablaContacto tbody tr td{
 	border-bottom: none;
 }
 /*Estilos de pagina Siniestros Seguros Gastos Salud*/
-.backSinGaSa .container{
-	margin-top: 60px;
-	margin-bottom: 60px;
-}
 .backSinGaSa.container{
 	margin-top: 60px;
 	margin-bottom: 60px;
@@ -1152,3 +1156,18 @@ table.tablaContacto tbody tr td{
 	height: 277px;
 }
 /*Terminan estilos de pagina Siniestros Seguros Gastos Salud*/
+  iframe {
+   min-height:750px !important;
+}
+.backSinGaSa{
+	background: url('http://ec2-52-213-166-151.eu-west-1.compute.amazonaws.com/wp-content/uploads/2017/02/img06.jpg') no-repeat;
+	padding: 80px 0px 80px 0px;
+	background-size: cover;
+}
+/*Terminan estilos de pagina Siniestros Seguros Gastos Salud*/
+/*Clase para preguntas frecuentes*/
+.fondoFAQs.active{
+    background-color: #094FA4;
+    color: white;
+}
+/*Termina clase para preguntas frecuentes*/
