@@ -53,11 +53,18 @@ $('.glyphicon').on('click' , function(){
 	}
 })
 });
+
 function pantalla(){
   pant = $(window).width();
   console.info( 'la pantalla mide ' + pant + 'px' );
-  if (pant <= 440) {
+  if (pant <= 600) {
   	$('.productosIndex .sinBordeIndex,.productosIndex .bordeIndex').css('height','auto');
+ 	$('#accordion').on('show.bs.collapse', function () {
+		$('html, body').animate({
+			scrollTop:$("#collapseUno").offset().top
+		}, 'slow');
+		return false;
+ 	})
   }else{
   	$('.productosIndex .sinBordeIndex,.productosIndex .bordeIndex').css({'height':'170px','font-size':'35px'});
   }
