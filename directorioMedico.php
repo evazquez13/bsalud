@@ -6,111 +6,6 @@
   <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="css/menu.css">
 
-<script type="text/javascript" src="http://www.bbvasegurossalud.com.mx/DirectorioMedico/js/xhr.js"></script>
-<script type="text/javascript" src="http://www.bbvasegurossalud.com.mx/DirectorioMedico/js/funcsAJAX.js"></script>
-<script type="text/javascript" src="http://www.bbvasegurossalud.com.mx/DirectorioMedico/js/ajaxbase.js"></script>
-<script language="JavaScript" type="text/JavaScript">
-</script>
-<!-- (I) Opimentel, 1197 - Cirugias TMKT - Agentes, 07/03/2013 -->
-<script type="text/javascript" src="../js/funcsGlobales.js"></script>
-<!-- (F) Opimentel, 1197 - Cirugias TMKT - Agentes, 07/03/2013 -->
-
-<script language="JavaScript" type="text/JavaScript">
-//-->
- function espera() {
-  document.getElementById("idEspera").style.display = '';
-}
-
- function muestra() {
-  document.getElementById("idEspera").style.display = 'none';
-}
-
-
-function pant_pop(url){
- var hWnd = window.open(url,"","width=710,height=430,top=20,left=50,status=no,resizable=no,scrollbars=yes");
- if ((document.window != null) && (!hWnd.opener))
- hWnd.opener = document.window;
- }
-
-function MM_swapImgRestore() { //v3.0
-  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
-}
-
-function MM_findObj(n, d) { //v4.01
-  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
-    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
-  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
-  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
-  if(!x && d.getElementById) x=d.getElementById(n); return x;
-}
-
-function MM_showHideLayers() { //v6.0
-  var i,p,v,obj,args=MM_showHideLayers.arguments;
-  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
-    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
-    obj.visibility=v; }
-}
-
-function MM_preloadImages() { //v3.0
-  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
-    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
-    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
-}
-
-
-function MM_swapImage() { //v3.0
-  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
-   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
-}
-
-function GetPoliza(){
-  
-  var objPoliza=document.getElementById('idpoliza').value;
-  var sUsuario = '';
-  var sPsw = '';
-    
-  if(objPoliza == ''){
-    alert("Debe insertar un Número de Poliza");
-    return false;
-  } 
-  enviarPoliza(objPoliza,sUsuario,sPsw);
-    
-}//fin funcion
-
-function procesoDistribucion(){
-// (I) AILuna 20130527 se agrega la validacion de "undefined"
-    if(document.getElementById("v_regresaGetPoliza").value == "-1" || document.getElementById("v_regresaGetPoliza").value == "undefined"){
-// (F) AILuna 20130527 se agrega la validacion de "undefined"
-    alert("Número de Póliza Inexistente o Incorrecto \n Favor de Verificar...");
-    document.getElementById("idEspera").style.display = 'none';
-    return false
-  }
-  else{
-    document.getElementById("idEspera").style.display = '';
-    document.logon.submit();
-  }
-}
-
-function ssubmit()
-{
-  document.logon.submit();
-}
-
-function CheckKey() {
-  if (event.keyCode == 13) {
-    document.getElementById("Button1").focus();
-  }
-}
-
-//(I)LHerrera 1270 - Cambio de Logo y Nombre 23/07/2013
-//redimencionamiento del iframe segun el contenido
-window.onload = function() {
-   window.parent.document.getElementById('contenedorSitio').height = document.getElementById('Contenido').offsetHeight;
-}
-//(F)LHerrera 1270 - Cambio de Logo y Nombre 23/07/2013
-
-</script>
-
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9M4QL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="blue-full-width-line-bancomer"></div>
@@ -292,23 +187,33 @@ window.onload = function() {
   </div>
   <div class="col-md-12 gmmCabecera">
     <div class="col-md-8 col-md-offset-2 formDirectorio">
-      <form name="logon" action="redservicios.asp" method="post" target="_self" onkeydown="CheckKey(event);">
-   <!--<input type="text" name="ValorPoliza" id="ValorPoliza">-->
-   <input type="hidden" name="tipoSeguroIndex" id="idtipoSeguroIndex">
-   <input type="hidden" name="TipoServicio" id="v_regresaGetPoliza">
-      
-      <p>En esta sección podrá encontrar los datos de médicos, laboratorios, gabinetes de radiología, etc. afiliados a la Red de Seguros Salud Bancomer.</p>
-      <h2>Escriba su Número de Póliza</h2>
-      <p>Este lo encuentra en su credencial de Seguros Salud Bancomer<br>y en su Certificado Individual.</p>
-      <div class="col-md-12">
-        <div class="col-md-6">
-          <input type="textbox" name="poliza" id="idpoliza" class="form-control" size="25" maxlength="19">&nbsp;
+      <?php
+
+  if (isset($_POST['buscar'])) {
+    $servicio="https://www.membresiavitamedica.com.mx/ws_dirmedicosweb/DirectorioMedico.asmx?wsdl"; //url del servicio
+    $parametros=array(); //parametros de la llamada
+    $parametros['usuario']="preventis";
+    $parametros['clave']="PrvtS/2012#";
+    $client = new SoapClient($servicio, $parametros);
+    $result = $client->ObtenDirectorioMedico($parametros);
+var_dump($result);
+  }
+  ?>
+
+<form class="form-horizontal" method="POST">
+        <h1>Bienvenido al Directorio de Servicios Médicos</h1>
+        <p>En esta sección podrá encontrar los datos de médicos, laboratorios, gabinetes de radiología, etc. afiliados a la Red de Seguros Salud Bancomer.</p>
+        <h2>Escriba su Número de Póliza</h2>
+        <p>Este lo encuentra en su credencial de Seguros Salud Bancomer y en su Certificado Individual.</p>
+        <div class="col-md-12">
+          <div class="col-md-6">
+            <input type="text" name="numPoliza" id="numPoliza" class="form-control">
+          </div>
+          <div class="col-md-6">
+            <button type="submit" value="buscar" name="buscar" class="boton-azul">Buscar</button>
+          </div>
         </div>
-        <div class="col-md-6">
-          <input type="button" value="Buscar" id="Button1" name="Button1" onclick="GetPoliza();" class="boton-azul">  
-        </div>
-      </div>
-   </form>
+      </form>
     </div>
   </div>
  </div>
