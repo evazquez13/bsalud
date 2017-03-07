@@ -195,7 +195,7 @@
     $parametros['usuario']="preventis";
     $parametros['clave']="PrvtS/2012#";
     $client = new SoapClient($servicio, $parametros);
-    $result = $client->ObtenDirectorioMedico($parametros);
+    $result = $client->getObtenDirectorioMedico($parametros);
 var_dump($result);
   }
   ?>
