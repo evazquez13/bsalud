@@ -175,29 +175,25 @@
 
 
 <div class="container">
-  <div class="row gmmCabecera">
-    <div class="col-md-12">
-      <p><a href="#">Seguros </a>> Directorio de Servicios Médicos.</p>
-    </div>
- </div>
  <div class="row gmmCabecera">
   <div class="col-md-12">
     <h1 class="text-left">Directorio de Servicios Médicos.</h1>
     <h2 class="text-left">Salud o Gastos Médicos</h2> 
   </div>
-  <div class="col-md-12 gmmCabecera">
+  <div class="col-md-12">
     <div class="col-md-8 col-md-offset-2 formDirectorio">
       <?php
 
   if (isset($_POST['buscar'])) {
-    $servicio="https://www.membresiavitamedica.com.mx/ws_dirmedicosweb/DirectorioMedico.asmx?wsdl"; //url del servicio
-    $parametros=array(); //parametros de la llamada
-    $parametros['usuario']="preventis";
-    $parametros['clave']="PrvtS/2012#";
-    $client = new SoapClient($servicio, $parametros);
-    $result = $client->getObtenDirectorioMedico($parametros);
-var_dump($result);
-  }
+
+      $servicio="https://www.membresiavitamedica.com.mx/ws_dirmedicosweb/DirectorioMedico.asmx?wsdl"; //url del servicio
+      $parametros=array(); //parametros de la llamada
+      $parametros['poliza'] = isset($_POST['numPoliza']);
+      $client = new SoapClient($servicio, $parametros);
+      $result = $client->ObtenTipoSeguro($parametros);
+      
+    } 
+      
   ?>
 
 <form class="form-horizontal" method="POST">
