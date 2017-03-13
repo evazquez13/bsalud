@@ -39,7 +39,7 @@ $url = "https://www.membresiavitamedica.com.mx/ws_dirmedicosweb/DirectorioMedico
   $output = curl_exec($ch);
  
  
-
+var_dump($output);
 echo("
 RESPONSE FROM SERVER :
 " .htmlspecialchars($output) . "
@@ -48,5 +48,7 @@ RESPONSE FROM SERVER :
 $xml=simplexml_load_file($output) or die("Error: Cannot create object");
 echo $xml->pObtenTipoSeguro[0]->poliza;
 curl_close($ch);
+
+
 
  ?>
